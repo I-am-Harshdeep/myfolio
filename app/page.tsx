@@ -19,10 +19,11 @@ export default function Home() {
             href="/" 
             className="text-lg font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400 hover:to-cyan-400 transition-all duration-300"
           >
-            GITFOLIO
+            HARSHFOLIO
           </Link>
           <div className="flex gap-8 text-xs font-bold tracking-widest uppercase text-cyan-700/80">
             <Link href="#work" className="hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">PROJECTS</Link>
+            <Link href="#experience" className="hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">EXPERIENCE</Link>
             <Link href="#philosophy" className="hover:text-fuchsia-400 hover:drop-shadow-[0_0_5px_rgba(232,121,249,0.8)] transition-all">ABOUT</Link>
             <Link href="#contact" className="hover:text-yellow-400 hover:drop-shadow-[0_0_5px_rgba(250,204,21,0.8)] transition-all">CONTACT</Link>
           </div>
@@ -35,27 +36,33 @@ export default function Home() {
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 text-xs font-bold tracking-widest uppercase animate-pulse">
               <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,1)]" />
-              READY TO LAUNCH
+              FULL-STACK ENGINEER
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1] drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">
-              BUILD YOUR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-purple-500 to-cyan-500 animate-gradient-x">DEVELOPER PORTFOLIO</span> <br />
-              IN MINUTES
+              Harshdeep Singh<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-purple-500 to-cyan-500 animate-gradient-x">Building production-ready apps</span> <br />
+              with scalable cloud architecture
             </h1>
           </div>
           <p className="text-lg md:text-xl text-cyan-100/70 max-w-2xl leading-relaxed font-light border-l-2 border-fuchsia-500/50 pl-6">
-            A beginner-friendly portfolio template that showcases your projects beautifully. Fork it, customize it, deploy it—no design skills required.
+            Hands-on Full-Stack Engineer focused on secure, scalable, and production-ready solutions. Experienced in reducing backend response times, maintaining 99.9% uptime, and accelerating feature delivery with AI-assisted tooling.
           </p>
-          <div className="pt-8 flex gap-6">
+          <div className="pt-8 flex flex-wrap gap-4">
             <Link 
               href="#work" 
-              className="group relative px-8 py-3 bg-cyan-950/30 border border-cyan-500/50 text-cyan-300 font-bold tracking-widest uppercase text-sm overflow-hidden hover:bg-cyan-900/50 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
+              className="group relative inline-flex items-center justify-center px-8 py-3 bg-cyan-950/30 border border-cyan-500/50 text-cyan-300 font-bold tracking-widest uppercase text-sm overflow-hidden hover:bg-cyan-900/50 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
             >
               <span className="relative z-10 flex items-center gap-2">
-                GET STARTED <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                VIEW PROJECTS <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
             </Link>
+            <a
+              href="mailto:beyourselfharsh@gmail.com"
+              className="px-8 py-3 border border-cyan-700/50 text-cyan-200 font-bold tracking-widest uppercase text-sm hover:bg-cyan-950/60 transition-all"
+            >
+              EMAIL ME
+            </a>
           </div>
         </section>
 
@@ -63,44 +70,111 @@ export default function Home() {
         <section id="work" className="py-20 space-y-12">
           <div className="flex items-end justify-between border-b border-cyan-900/30 pb-4">
             <h2 className="text-2xl font-bold tracking-widest text-fuchsia-400 drop-shadow-[0_0_8px_rgba(232,121,249,0.6)]">
-              // YOUR_PROJECTS
+              // SELECTED_WORK
             </h2>
-            <span className="text-xs font-mono text-cyan-700">Showcase what you&apos;ve built with style</span>
+            <span className="text-xs font-mono text-cyan-700">Production-ready systems, AI-enabled tooling, and cloud-scaled applications</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project 1 */}
             <ProjectCard 
-              title="PROJECT_ONE"
-              description="Your first amazing project goes here. Describe what problem it solves and the tech you used to build it."
-              tags={["REACT", "NEXTJS", "TAILWIND"]}
+              title="Cloud-Based Music Subscription App"
+              description="Built a scalable music subscription platform with secure auth, automated media processing, and Ubuntu-hosted deployment on AWS." 
+              tags={["AWS", "Python", "Ubuntu", "Nginx"]}
               color="cyan"
               href="#"
             />
-            {/* Project 2 */}
             <ProjectCard 
-              title="PROJECT_TWO"
-              description="Your second project showcase. Tell visitors what makes this project special and what you learned building it."
-              tags={["JAVASCRIPT", "API", "CSS"]}
+              title="BroCode Study Partner Platform"
+              description="Delivered a global student collaboration app with real-time workflows, optimized Django ORM, and responsive cross-device UI. Live demo available." 
+              tags={["Django", "JavaScript", "SQL", "LIVE DEMO"]}
               color="fuchsia"
-              href="#"
+              href="https://brocode-app-a7ad7894da36.herokuapp.com/"
             />
-            {/* Project 3 */}
             <ProjectCard 
-              title="PROJECT_THREE"
-              description="Another project to highlight your skills. Share the impact or results of this work."
-              tags={["TYPESCRIPT", "NODE", "EXPRESS"]}
+              title="Rule-Based CPQ System"
+              description="Owned the full TypeScript/Node.js CPQ build for 200+ configurations, focusing on clean architecture, type safety, and Agile delivery." 
+              tags={["TypeScript", "Node.js", "Agile", "API"]}
               color="purple"
               href="#"
             />
-            {/* Project 4 */}
             <ProjectCard 
-              title="PROJECT_FOUR"
-              description="Keep building and adding to your portfolio. Each project tells part of your developer story."
-              tags={["PYTHON", "DJANGO", "POSTGRESQL"]}
+              title="Banking Automation & OCR Workflow"
+              description="Implemented cloud-integrated document processing and enterprise banking portal enhancements for Axis Bank with high reliability." 
+              tags={["AWS", "OCR", "Banking", "Security"]}
               color="yellow"
               href="#"
             />
+          </div>
+        </section>
+
+        <section id="experience" className="py-20 space-y-12 border-t border-cyan-900/30">
+          <div className="flex items-end justify-between border-b border-cyan-900/30 pb-4">
+            <h2 className="text-2xl font-bold tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
+              // EXPERIENCE
+            </h2>
+            <span className="text-xs font-mono text-cyan-700">Impact-driven roles in software delivery, support, and mentoring</span>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6">
+            <div className="p-6 bg-[#0a0a1a] border border-cyan-900/30 rounded-sm">
+              <div className="flex justify-between items-start gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white tracking-wider">Software Engineer, Servosys Solutions</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-cyan-500 mt-2">Feb 2026 – Present • Noida, India</p>
+                </div>
+                <span className="text-sm text-cyan-400">Axis Bank, enterprise banking</span>
+              </div>
+              <ul className="mt-4 space-y-3 text-cyan-200/80 text-sm leading-relaxed">
+                <li>Delivered enterprise banking enhancements and sustained internal portals with secure, high-availability design.</li>
+                <li>Built OCR document processing workflows to automate verification and reduce manual data entry.</li>
+                <li>Integrated AWS cloud services to scale performance and support reliable production deployments.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-[#0a0a1a] border border-cyan-900/30 rounded-sm">
+              <div className="flex justify-between items-start gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white tracking-wider">Associate Customer Support Analyst, Tech Mahindra</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-cyan-500 mt-2">Aug 2025 – Feb 2026 • Melbourne, VIC</p>
+                </div>
+                <span className="text-sm text-cyan-400">Salesforce, ServiceNow, CRM</span>
+              </div>
+              <ul className="mt-4 space-y-3 text-cyan-200/80 text-sm leading-relaxed">
+                <li>Managed order tracking, scheduling, and support workflows to maintain SLA compliance and high customer satisfaction.</li>
+                <li>Coordinated cross-functional teams to resolve service requests and ensure accurate order updates.</li>
+                <li>Documented interactions and generated performance reports using CRM and ticketing systems.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-[#0a0a1a] border border-cyan-900/30 rounded-sm">
+              <div className="flex justify-between items-start gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white tracking-wider">Software Engineer, Fibreglass Transport Equipment PVT. LTD.</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-cyan-500 mt-2">Mar 2025 – Jun 2025 • Melbourne, VIC</p>
+                </div>
+                <span className="text-sm text-cyan-400">TypeScript, Node.js, CPQ</span>
+              </div>
+              <ul className="mt-4 space-y-3 text-cyan-200/80 text-sm leading-relaxed">
+                <li>Built a rule-based CPQ system from end to end, delivering configuration management for 200+ options.</li>
+                <li>Served as a core member of a 5-person Agile team, taking features from discovery through release.</li>
+                <li>Boosted velocity with AI-assisted tooling while enforcing strict linting and quality standards.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-[#0a0a1a] border border-cyan-900/30 rounded-sm">
+              <div className="flex justify-between items-start gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white tracking-wider">Peer Mentor, Royal Melbourne Institute of Technology</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-cyan-500 mt-2">Mar 2024 – Jul 2025 • Melbourne, VIC</p>
+                </div>
+                <span className="text-sm text-cyan-400">Mentoring, collaboration, learning</span>
+              </div>
+              <ul className="mt-4 space-y-3 text-cyan-200/80 text-sm leading-relaxed">
+                <li>Mentored students on technical and professional growth, elevating team confidence and outcomes.</li>
+                <li>Facilitated knowledge-sharing sessions to create a collaborative learning culture on campus.</li>
+                <li>Helped drive a 20% increase in mentee engagement and retention across mentoring initiatives.</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -113,39 +187,76 @@ export default function Home() {
             
             {/* Profile Image - Replace src with your image in /public */}
             <div className="relative w-full aspect-[4/5] border border-cyan-500/30 rounded-sm overflow-hidden bg-cyan-950/30 group">
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(5,5,16,0.8)_100%)] z-10" />
               {/* Scanline effect */}
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(34,211,238,0.05)_1px,transparent_1px)] bg-[size:100%_4px] z-20 pointer-events-none" />
               
               <Image 
-                src={`${basePath}/me.png`}
+                src={`${basePath}/1000054066.png`}
                 alt="Profile"
                 fill
-                className="object-cover z-0 opacity-60 group-hover:opacity-100 transition-all duration-500 grayscale group-hover:grayscale-0"
+                className="object-cover z-0 opacity-100 transition-all duration-500"
               />
             </div>
           </div>
           <div className="md:col-span-8 space-y-8 text-cyan-100/80 leading-relaxed font-light">
             <p>
-              Every developer has a unique journey. Share yours here—whether you&apos;re self-taught, a bootcamp grad, or transitioning careers. <strong className="text-fuchsia-400 font-bold">Your story matters.</strong> Talk about what drives you to code and the impact you want to make.
+              I&apos;m a Master of Information Technology from RMIT, Australia with a proven record of delivering enterprise software that is secure, scalable and production-ready. I combine full-stack engineering, cloud architecture, and AI-assisted development to ship features fast while keeping systems stable.
             </p>
+            <div className="grid gap-6 lg:grid-cols-2">
+              <div className="p-6 bg-cyan-950/20 border border-cyan-500/20 rounded-sm">
+                <h3 className="text-cyan-300 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">EDUCATION</h3>
+                <div className="space-y-4 text-sm text-cyan-200/70">
+                  <div>
+                    <p className="font-bold text-white">Royal Melbourne Institute of Technology</p>
+                    <p>Master of Information Technology • GPA 3.3/4.0</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-cyan-500">Aug 2023 – Jul 2025</p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-white">Guru Tegh Bahadur Institute of Technology</p>
+                    <p>Bachelor of Technology • GPA 9.23/10.0</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-cyan-500">Aug 2018 – Jul 2022</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 bg-cyan-950/20 border border-cyan-500/20 rounded-sm">
+                <h3 className="text-cyan-300 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">TECH SKILLS</h3>
+                <div className="grid gap-3 text-sm text-cyan-200/70">
+                  <div>
+                    <p className="font-bold text-white uppercase tracking-[0.2em] text-[10px]">Frontend</p>
+                    <p>Angular, TypeScript, React, Next.js, HTML5, CSS</p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-white uppercase tracking-[0.2em] text-[10px]">Backend</p>
+                    <p>.NET Core, C#, Spring Boot, Java, Node.js, RESTful APIs, Microservices</p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-white uppercase tracking-[0.2em] text-[10px]">Cloud & DevOps</p>
+                    <p>Azure, AWS (EC2, S3, Lambda), Docker, Nginx, CI/CD, GitHub Actions</p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-white uppercase tracking-[0.2em] text-[10px]">Databases</p>
+                    <p>PostgreSQL, MySQL, MongoDB, DynamoDB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="p-6 bg-cyan-950/20 border border-cyan-500/20 rounded-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-cyan-500" />
               <div className="grid grid-cols-2 gap-8 font-mono text-sm">
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">STACK_TRACE</h3>
+                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">CERTIFICATIONS</h3>
                   <ul className="space-y-2 text-cyan-200/70">
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> JavaScript / Python / TypeScript</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> React / Next.js / Node.js</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Git / GitHub / VS Code</li>
+                    <li>University of Alberta: Software Architecture and Design Patterns</li>
+                    <li>EY - Microsoft AI Skills Passport</li>
+                    <li>Stanford Machine Learning</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">PROTOCOLS</h3>
+                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">TOOLS</h3>
                   <ul className="space-y-2 text-cyan-200/70">
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Always learning</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Ship &gt; Perfect</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Open source contributor</li>
+                    <li>Claude / AI-assisted development</li>
+                    <li>Jest, JUnit5, ESLint, Git, Jira</li>
+                    <li>Agile workflows, code reviews, testing</li>
                   </ul>
                 </div>
               </div>
@@ -157,30 +268,50 @@ export default function Home() {
         <section id="contact" className="py-20 border-t border-cyan-900/30">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
-              READY TO <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">LAUNCH?</span>
+              LET&apos;S BUILD SOMETHING <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">REAL</span>
             </h2>
             <p className="text-cyan-200/60 text-lg">
-              Fork this template on GitHub and make it yours. Update the content, add your projects, and deploy to GitHub Pages in under 30 minutes.
+              Reach out to discuss software engineering, cloud architecture, AI-enabled development, or a new product challenge. I&apos;m available for full-time roles, consulting, and technical delivery.
             </p>
-            <div className="flex flex-col items-center gap-6">
-              <a 
-                href="https://github.com/ladykerr/gfbs3-portfolio-demo" 
-                className="px-10 py-4 bg-fuchsia-600 text-white font-bold tracking-widest uppercase text-sm hover:bg-fuchsia-500 transition-all hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] hover:scale-105 duration-300 clip-path-polygon"
-              >
-                FORK ON GITHUB
-              </a>
-              <div className="flex items-center gap-8 pt-4">
-                <SocialLink href="https://github.com" label="GITHUB" />
-                <SocialLink href="https://linkedin.com" label="LINKEDIN" />
-                <SocialLink href="https://twitter.com" label="TWITTER" />
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left text-cyan-100/80 text-sm font-mono">
+                <div className="bg-[#0a0a1a] p-5 border border-cyan-900/30 rounded-sm">
+                  <p className="text-cyan-400 uppercase tracking-[0.3em] text-[10px] mb-3">Email</p>
+                  <a href="mailto:beyourselfharsh@gmail.com" className="text-cyan-200 hover:text-cyan-100">beyourselfharsh@gmail.com</a>
+                </div>
+                <div className="bg-[#0a0a1a] p-5 border border-cyan-900/30 rounded-sm">
+                  <p className="text-cyan-400 uppercase tracking-[0.3em] text-[10px] mb-3">Phone</p>
+                  <a href="tel:+918368917234" className="text-cyan-200 hover:text-cyan-100">+91 8368917234</a>
+                </div>
+                <div className="bg-[#0a0a1a] p-5 border border-cyan-900/30 rounded-sm">
+                  <p className="text-cyan-400 uppercase tracking-[0.3em] text-[10px] mb-3">LinkedIn</p>
+                  <a href="https://linkedin.com/in/harshdeep-singh-1303/" target="_blank" rel="noopener noreferrer" className="text-cyan-200 hover:text-cyan-100">linkedin.com/in/harshdeep-singh-1303</a>
+                </div>
+                <div className="bg-[#0a0a1a] p-5 border border-cyan-900/30 rounded-sm">
+                  <p className="text-cyan-400 uppercase tracking-[0.3em] text-[10px] mb-3">GitHub</p>
+                  <a href="https://github.com/I-am-Harshdeep" target="_blank" rel="noopener noreferrer" className="text-cyan-200 hover:text-cyan-100">github.com/I-am-Harshdeep</a>
+                </div>
+              </div>
+              <div className="flex flex-col items-center gap-4 pt-4">
+                <a 
+                  href="/Harshdeep_Singh_Resume.pdf" 
+                  download
+                  className="px-10 py-4 bg-fuchsia-600 text-white font-bold tracking-widest uppercase text-sm hover:bg-fuchsia-500 transition-all hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] hover:scale-105 duration-300"
+                >
+                  DOWNLOAD RESUME
+                </a>
+                <div className="flex items-center justify-center gap-8 text-xs uppercase tracking-[0.3em] text-cyan-700">
+                  <SocialLink href="https://github.com/I-am-Harshdeep" label="GITHUB" />
+                  <SocialLink href="https://linkedin.com/in/harshdeep-singh-1303/" label="LINKEDIN" />
+                </div>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="py-8 text-center text-xs font-mono text-cyan-900/50 border-t border-cyan-900/20">
-        <p>Made with ❤️ by <a href="https://gh.io/gfb" target="_blank" rel="noopener noreferrer" className="text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">GitHub for Beginners</a> and <a href="https://gh.io/gfb-copilot" target="_blank" rel="noopener noreferrer" className="text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">GitHub Copilot</a></p>
+      <footer className="py-8 text-center text-xs font-mono text-cyan-200/80 border-t border-cyan-900/20">
+        <p>Built by Harshdeep Singh • <a href="mailto:beyourselfharsh@gmail.com" className="text-cyan-100 hover:text-cyan-50 transition-all">beyourselfharsh@gmail.com</a> • <a href="https://github.com/I-am-Harshdeep" target="_blank" rel="noopener noreferrer" className="text-cyan-100 hover:text-cyan-50 transition-all">GitHub</a></p>
       </footer>
     </div>
   );
