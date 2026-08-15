@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -72,7 +73,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold tracking-widest text-fuchsia-400 drop-shadow-[0_0_8px_rgba(232,121,249,0.6)]">
               // SELECTED_WORK
             </h2>
-            <span className="text-xs font-mono text-cyan-700">Production-ready systems, AI-enabled tooling, and cloud-scaled applications</span>
+            <span className="text-xs font-mono text-cyan-700">Production-ready systems, AI-enabled tooling, and Cloud-Scaled Applications</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -112,7 +113,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
               // EXPERIENCE
             </h2>
-            <span className="text-xs font-mono text-cyan-700">Impact-driven roles in software delivery, support, and mentoring</span>
+            <span className="text-xs font-mono text-cyan-700">Impact-driven roles in software delivery, Support, and Mentoring</span>
           </div>
 
           <div className="grid grid-cols-1 gap-6">
@@ -122,7 +123,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-white tracking-wider">Software Engineer, Servosys Solutions</h3>
                   <p className="text-xs uppercase tracking-[0.3em] text-cyan-500 mt-2">Feb 2026 – Present • Noida, India</p>
                 </div>
-                <span className="text-sm text-cyan-400">Axis Bank, enterprise banking</span>
+                <span className="text-sm text-cyan-400">Axis Bank, Enterprise Banking</span>
               </div>
               <ul className="mt-4 space-y-3 text-cyan-200/80 text-sm leading-relaxed">
                 <li>Delivered enterprise banking enhancements and sustained internal portals with secure, high-availability design.</li>
@@ -167,7 +168,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-white tracking-wider">Peer Mentor, Royal Melbourne Institute of Technology</h3>
                   <p className="text-xs uppercase tracking-[0.3em] text-cyan-500 mt-2">Mar 2024 – Jul 2025 • Melbourne, VIC</p>
                 </div>
-                <span className="text-sm text-cyan-400">Mentoring, collaboration, learning</span>
+                <span className="text-sm text-cyan-400">Mentoring, Collaboration, Learning</span>
               </div>
               <ul className="mt-4 space-y-3 text-cyan-200/80 text-sm leading-relaxed">
                 <li>Mentored students on technical and professional growth, elevating team confidence and outcomes.</li>
@@ -256,7 +257,7 @@ export default function Home() {
                   <ul className="space-y-2 text-cyan-200/70">
                     <li>Claude / AI-assisted development</li>
                     <li>Jest, JUnit5, ESLint, Git, Jira</li>
-                    <li>Agile workflows, code reviews, testing</li>
+                    <li>Agile workflows, Code reviews, Testing</li>
                   </ul>
                 </div>
               </div>
@@ -294,8 +295,8 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center gap-4 pt-4">
                 <a 
-                  href="/Harshdeep_Singh_Resume.pdf" 
-                  download
+                  href={`${basePath}/Harshdeep_Singh_Resume.pdf`} 
+                  download="Harshdeep_Singh_Resume.pdf"
                   className="px-10 py-4 bg-fuchsia-600 text-white font-bold tracking-widest uppercase text-sm hover:bg-fuchsia-500 transition-all hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] hover:scale-105 duration-300"
                 >
                   DOWNLOAD RESUME
